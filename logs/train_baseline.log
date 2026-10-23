@@ -1,0 +1,9 @@
+# train_baseline.py  started 2026-10-23T07:01:25Z
+Logistic regression: val acc=0.8952 f1=0.8717 fit=0.15s
+Random forest: val acc=0.9338 f1=0.9119 fit=4.51s
+Extra trees: val acc=0.9434 f1=0.9266 fit=0.53s
+K-nearest neighbors: val acc=0.8966 f1=0.8727 fit=0.00s
+HHO weights: {'Logistic regression': 0.05898477401366504, 'Random forest': 0.06123440951002557, 'Extra trees': 0.872106362070193, 'K-nearest neighbors': 0.007674454406116445}
+Ensemble: val acc=0.9462 f1=0.9290
+Saved baseline_results.json
+# exit 0  finished 2026-10-23T07:01:33Z

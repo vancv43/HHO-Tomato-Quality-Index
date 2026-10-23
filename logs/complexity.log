@@ -1,0 +1,13 @@
+# complexity.py  started 2026-10-23T07:06:00Z
+Logistic regression: train=0.165s infer=0.0002ms/img (+features=8.7597ms) params/nodes=504
+Random forest: train=3.398s infer=0.0560ms/img (+features=8.7597ms) params/nodes=245256
+Extra trees: train=1.118s infer=0.0727ms/img (+features=8.7597ms) params/nodes=639580
+K-nearest neighbors: train=0.010s infer=0.0400ms/img (+features=8.7597ms) params/nodes=None
+
+HHO ensemble (sum of 4 base learners + HHO offline weight search):
+  training (one-off): 4.692s classifiers + HHO search (see convergence log)
+  inference: 8.9287 ms/image (feature extraction 8.7597 ms + 4 model calls 0.1690 ms)
+  throughput: 112.0 images/second (single CPU thread, no batching)
+
+Saved complexity_results.json
+# exit 0  finished 2026-10-23T07:06:10Z

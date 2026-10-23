@@ -1,0 +1,12 @@
+# sensitivity.py  started 2026-10-23T07:03:25Z
+hawks=  8 iters= 10: acc=0.9418+/-0.0022 f1=0.9246+/-0.0022 w_ET=0.859
+hawks=  8 iters= 25: acc=0.9426+/-0.0031 f1=0.9257+/-0.0039 w_ET=0.889
+hawks=  8 iters= 50: acc=0.9429+/-0.0027 f1=0.9256+/-0.0036 w_ET=0.884
+hawks= 16 iters= 10: acc=0.9421+/-0.0037 f1=0.9246+/-0.0043 w_ET=0.846
+hawks= 16 iters= 25: acc=0.9393+/-0.0015 f1=0.9215+/-0.0015 w_ET=0.785
+hawks= 16 iters= 50: acc=0.9401+/-0.0026 f1=0.9227+/-0.0031 w_ET=0.788
+hawks= 32 iters= 10: acc=0.9443+/-0.0032 f1=0.9270+/-0.0035 w_ET=0.844
+hawks= 32 iters= 25: acc=0.9465+/-0.0010 f1=0.9294+/-0.0011 w_ET=0.850
+hawks= 32 iters= 50: acc=0.9399+/-0.0039 f1=0.9221+/-0.0043 w_ET=0.770
+Saved sensitivity_results.json
+# exit 0  finished 2026-10-23T07:04:04Z

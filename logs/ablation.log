@@ -1,0 +1,12 @@
+# ablation.py  started 2026-10-23T07:01:33Z
+[Feature ablation] RGB only (36-d): HHO acc=0.9186 f1=0.8995 | equal-weight acc=0.9007 | best-single=Extra trees acc=0.9241
+[Feature ablation] RGB+HSV (72-d): HHO acc=0.9462 f1=0.9320 | equal-weight acc=0.9172 | best-single=Extra trees acc=0.9476
+[Feature ablation] RGB+HSV+Lab, no ripeness idx (108-d): HHO acc=0.9490 f1=0.9352 | equal-weight acc=0.9324 | best-single=Extra trees acc=0.9462
+[Feature ablation] Full: RGB+HSV+Lab+ripeness idx (125-d): HHO acc=0.9462 f1=0.9290 | equal-weight acc=0.9324 | best-single=Extra trees acc=0.9434
+[Ensemble-composition ablation] Full ensemble (none dropped): acc=0.9462 f1=0.9290
+[Ensemble-composition ablation] Without Logistic regression: acc=0.9434 f1=0.9266
+[Ensemble-composition ablation] Without Random forest: acc=0.9393 f1=0.9217
+[Ensemble-composition ablation] Without Extra trees: acc=0.9283 f1=0.9093
+[Ensemble-composition ablation] Without K-nearest neighbors: acc=0.9393 f1=0.9217
+Saved ablation_results.json
+# exit 0  finished 2026-10-23T07:01:56Z

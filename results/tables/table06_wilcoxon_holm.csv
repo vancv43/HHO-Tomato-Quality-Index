@@ -1,0 +1,5 @@
+comparison,p_raw,p_holm,significant_alpha_0.05
+vs Logistic regression,1.9e-6,7.6e-6,Yes
+vs Random forest,3.8e-6,7.6e-6,Yes
+vs K-nearest neighbors,1.9e-6,7.6e-6,Yes
+vs Extra trees,0.0707,0.0707,No

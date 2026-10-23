@@ -1,0 +1,4 @@
+pipeline,accuracy,f1,latency_ms,train_s
+HHO-XQI (color-statistical; CPU),0.9462,0.9290,12.05,3.92
+ResNet18 CNN + Grad-CAM (CPU),0.9931,0.9918,11.31,575.7
+ResNet18 CNN + Grad-CAM (MPS/GPU),0.9931,0.9918,3.22,575.7

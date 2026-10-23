@@ -1,0 +1,32 @@
+# cv_stats.py  started 2026-10-23T07:01:56Z
+Fold 1/20 done. Ensemble F1=0.9469 acc=0.9578
+Fold 2/20 done. Ensemble F1=0.9528 acc=0.9619
+Fold 3/20 done. Ensemble F1=0.9455 acc=0.9557
+Fold 4/20 done. Ensemble F1=0.9382 acc=0.9509
+Fold 5/20 done. Ensemble F1=0.9369 acc=0.9509
+Fold 6/20 done. Ensemble F1=0.9405 acc=0.9537
+Fold 7/20 done. Ensemble F1=0.9538 acc=0.9633
+Fold 8/20 done. Ensemble F1=0.9394 acc=0.9516
+Fold 9/20 done. Ensemble F1=0.9547 acc=0.9619
+Fold 10/20 done. Ensemble F1=0.9447 acc=0.9550
+Fold 11/20 done. Ensemble F1=0.9429 acc=0.9557
+Fold 12/20 done. Ensemble F1=0.9491 acc=0.9564
+Fold 13/20 done. Ensemble F1=0.9442 acc=0.9543
+Fold 14/20 done. Ensemble F1=0.9395 acc=0.9522
+Fold 15/20 done. Ensemble F1=0.9369 acc=0.9481
+Fold 16/20 done. Ensemble F1=0.9361 acc=0.9488
+Fold 17/20 done. Ensemble F1=0.9479 acc=0.9564
+Fold 18/20 done. Ensemble F1=0.9417 acc=0.9543
+Fold 19/20 done. Ensemble F1=0.9521 acc=0.9592
+Fold 20/20 done. Ensemble F1=0.9410 acc=0.9529
+Logistic regression F1: 0.8982 +/- 0.0055 Acc: 0.9148 +/- 0.0044
+Random forest F1: 0.9365 +/- 0.0064 Acc: 0.9488 +/- 0.0049
+Extra trees F1: 0.9464 +/- 0.0062 Acc: 0.9565 +/- 0.0047
+K-nearest neighbors F1: 0.8850 +/- 0.0080 Acc: 0.9029 +/- 0.0064
+HHO ensemble F1: 0.9442 +/- 0.0058 Acc: 0.9551 +/- 0.0041
+HHO ensemble vs Logistic regression: p_raw=0.0000 p_holm=0.0000
+HHO ensemble vs Random forest: p_raw=0.0000 p_holm=0.0000
+HHO ensemble vs Extra trees: p_raw=0.0707 p_holm=0.0707
+HHO ensemble vs K-nearest neighbors: p_raw=0.0000 p_holm=0.0000
+Saved cv_stats_results.json
+# exit 0  finished 2026-10-23T07:03:25Z

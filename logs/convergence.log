@@ -1,0 +1,13 @@
+# convergence.py  started 2026-10-23T07:04:04Z
+seed 0: final fitness=0.04370 (1-F1)
+seed 1: final fitness=0.04477 (1-F1)
+seed 2: final fitness=0.04477 (1-F1)
+seed 3: final fitness=0.04477 (1-F1)
+seed 4: final fitness=0.04477 (1-F1)
+seed 5: final fitness=0.04370 (1-F1)
+seed 6: final fitness=0.04370 (1-F1)
+seed 7: final fitness=0.04477 (1-F1)
+seed 8: final fitness=0.04370 (1-F1)
+seed 9: final fitness=0.04370 (1-F1)
+Saved fig_hho_convergence.png and convergence_results.json
+# exit 0  finished 2026-10-23T07:04:34Z

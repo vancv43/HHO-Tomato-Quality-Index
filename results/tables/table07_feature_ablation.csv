@@ -1,0 +1,5 @@
+feature_set,dim,accuracy,f1
+RGB only,36,0.9186,0.8995
+RGB + HSV,72,0.9462,0.9320
+RGB + HSV + Lab (no ripeness indices),108,0.9490,0.9352
+Full (+ ripeness/damage indices),125,0.9462,0.9290

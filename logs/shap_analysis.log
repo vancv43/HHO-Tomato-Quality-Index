@@ -1,0 +1,50 @@
+# shap_analysis.py  started 2026-10-23T07:04:53Z
+shap values shape (samples, features, classes): (300, 125, 4)
+
+Top features (global mean |SHAP|):
+  H_hist1              0.01720
+  a_hist5              0.01700
+  red_dominant_frac    0.01687
+  a_std                0.01580
+  a_mean               0.01553
+  ripe_hue_frac        0.01457
+  lab_a_mean           0.01334
+  H_hist0              0.01270
+  a_hist3              0.01259
+  b_hist6              0.01172
+  ngri                 0.00862
+  edge_density         0.00855
+  B_hist7              0.00832
+  B_std                0.00832
+  L_hist7              0.00815
+
+Top-5 for class Damaged:
+  B_hist7              0.01353
+  L_hist7              0.01249
+  ripe_hue_frac        0.01204
+  H_hist1              0.01179
+  G_hist7              0.01084
+
+Top-5 for class Old:
+  a_hist5              0.02390
+  a_std                0.01869
+  ripe_hue_frac        0.01613
+  b_hist6              0.01547
+  a_mean               0.01324
+
+Top-5 for class Ripe:
+  b_hist6              0.02286
+  red_dominant_frac    0.02236
+  ripe_hue_frac        0.01806
+  edge_density         0.01528
+  B_std                0.01454
+
+Top-5 for class Unripe:
+  H_hist1              0.03201
+  a_mean               0.02908
+  a_std                0.02569
+  a_hist5              0.02497
+  a_hist3              0.02431
+
+Saved shap_results.json and fig_shap_importance.png
+# exit 0  finished 2026-10-23T07:06:00Z

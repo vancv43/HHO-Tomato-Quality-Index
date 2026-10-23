@@ -1,0 +1,6 @@
+class,train,validation,total
+Damaged,949,106,1055
+Old,1992,222,2214
+Ripe,1975,220,2195
+Unripe,1585,177,1762
+Total,6501,725,7226

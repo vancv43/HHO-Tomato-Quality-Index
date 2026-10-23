@@ -1,0 +1,7 @@
+model,train_s,inference_ms_per_img,complexity
+Logistic regression,0.24,0.0005,O(m) per sample
+Random forest,3.22,0.0602,O(T log n) per sample; T=300
+Extra trees,0.46,0.0526,O(T log n) per sample; T=300
+K-nearest neighbors,<0.01,0.0157,O(nm) per sample (brute force)
+Feature extraction,,11.93,per image
+Full HHO-XQI pipeline,3.92,12.05,82.96 images/s (1 CPU thread)

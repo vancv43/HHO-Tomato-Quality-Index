@@ -1,0 +1,5 @@
+base_learner,fusion_weight
+Extra trees,0.8721
+Random forest,0.0612
+Logistic regression,0.0590
+K-nearest neighbors,0.0077
