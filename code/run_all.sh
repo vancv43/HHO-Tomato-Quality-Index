@@ -1,4 +1,12 @@
 #!/usr/bin/env bash
+# /*
+#  * Van Van Chau(1), Phayung Meesad(2,*), and Minh Tuan Nguyen(1)
+#  * (1) Faculty of Information Technology, Posts and Telecommunications Institute of Technology,
+#  *     Ho Chi Minh City, Vietnam, vancv@ptit.edu.vn, minhtuan@ptit.edu.vn
+#  * (2) Department of Information Technology Management, King Mongkut's University of Technology North Bangkok,
+#  *     Bangkok, Thailand, phayung.m@itd.kmutnb.ac.th
+#  * (*) Corresponding author
+#  */
 # Runs the analyses in paper order. Raw-image steps run only when the images are present.
 set -euo pipefail
 PY=${PYTHON:-python}
