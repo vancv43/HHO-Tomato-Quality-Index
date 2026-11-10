@@ -210,11 +210,11 @@ bash code/run_all.sh
 |:--|:--|:--|
 | Tables 3–9 | `logs/*.log` | logged rerun matches `results/*.json` exactly |
 | Table 10 timings | `logs/complexity.log` | complexity values identical, timings depend on the machine |
-| Table 11 | `results/cnn_history.json`, `results/cnn_latency.json` | original CNN run |
+| Table 11 | `results/cnn_history.json`, `results/cnn_latency.json`, `weights/cnn_best.pt` | original CNN run |
 
 - **Library version:** use scikit-learn 1.5.2. Newer releases change the random-forest and extra-trees fits, which shifts the base-learner scores and the fusion weights.
 - **Headline configuration:** Tables 3–4 come from `train_baseline.py` as released: 16 hawks, 25 iterations, seed 42, with HHO tuned on a stratified 15% split of the training set.
-- **Trained weights:** the CNN weights are not distributed. `code/train_cnn.py` writes `cnn_best.pt` into `outputs/`.
+- **Trained weights:** `weights/cnn_best.pt` holds the trained ResNet18. To measure latency without retraining, copy it into `outputs/` and run `python code/cnn_latency.py`. `code/train_cnn.py` writes a new `cnn_best.pt` into `outputs/`.
 
 ## Scripts
 
@@ -245,6 +245,7 @@ HHO-Tomato-Quality-Index/
 ├── results/         result JSON files and tables/ as CSV
 ├── logs/            run logs
 ├── figures/         Figures 1–9 as vector PDF, png/ holds 300-dpi copies
+├── weights/         trained ResNet18 checkpoint
 ├── CITATION.cff
 ├── LICENSE
 └── requirements.txt

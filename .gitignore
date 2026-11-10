@@ -4,5 +4,3 @@ __pycache__/
 .venv/
 outputs/
 data_raw/Tomatoes Dataset/
-*.pt
-*.pth
