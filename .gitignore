@@ -3,4 +3,6 @@ __pycache__/
 .DS_Store
 .venv/
 outputs/
-data/Tomatoes Dataset/
+data_raw/Tomatoes Dataset/
+*.pt
+*.pth

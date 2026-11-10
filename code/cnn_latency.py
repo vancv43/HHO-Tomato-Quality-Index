@@ -1,3 +1,10 @@
+# Van Van Chau(1), Phayung Meesad(2,*), and Minh Tuan Nguyen(1)
+# (1) Faculty of Information Technology, Posts and Telecommunications Institute of Technology,
+#     Ho Chi Minh City, Vietnam, vancv@ptit.edu.vn, minhtuan@ptit.edu.vn
+# (2) Department of Information Technology Management, King Mongkut's University of Technology North Bangkok,
+#     Bangkok, Thailand, phayung.m@itd.kmutnb.ac.th
+# (*) Corresponding author
+#
 import os
 import time
 import json
@@ -34,26 +41,28 @@ if __name__ == "__main__":
         cpu_ms = (time.time() - t0) / n * 1000
     print(f"CNN CPU inference: {cpu_ms:.3f} ms/image (batch=1, single thread default)")
 
-    # MPS latency, if available
-    mps_ms = None
-    if torch.backends.mps.is_available():
-        device_mps = torch.device("mps")
-        model_mps = build_model().to(device_mps)
-        model_mps.load_state_dict(torch.load(f"{OUT}/cnn_best.pt", map_location=device_mps))
-        model_mps.eval()
-        xm = torch.randn(1, 3, 128, 128).to(device_mps)
+    # GPU latency, if a GPU is available
+    gpu_ms = None
+    gpu = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else None
+    if gpu:
+        synchronize = torch.cuda.synchronize if gpu == "cuda" else torch.mps.synchronize
+        device_gpu = torch.device(gpu)
+        model_gpu = build_model().to(device_gpu)
+        model_gpu.load_state_dict(torch.load(f"{OUT}/cnn_best.pt", map_location=device_gpu))
+        model_gpu.eval()
+        xg = torch.randn(1, 3, 128, 128).to(device_gpu)
         with torch.no_grad():
             for _ in range(10):
-                model_mps(xm)
-            torch.mps.synchronize()
+                model_gpu(xg)
+            synchronize()
             n = 100
             t0 = time.time()
             for _ in range(n):
-                model_mps(xm)
-            torch.mps.synchronize()
-            mps_ms = (time.time() - t0) / n * 1000
-        print(f"CNN MPS (GPU) inference: {mps_ms:.3f} ms/image (batch=1)")
+                model_gpu(xg)
+            synchronize()
+            gpu_ms = (time.time() - t0) / n * 1000
+        print(f"CNN GPU inference: {gpu_ms:.3f} ms/image (batch=1)")
 
     with open(f"{OUT}/cnn_latency.json", "w") as f:
-        json.dump({"cpu_ms_per_image": cpu_ms, "mps_ms_per_image": mps_ms}, f, indent=2)
+        json.dump({"cpu_ms_per_image": cpu_ms, "gpu_ms_per_image": gpu_ms}, f, indent=2)
     print("Saved cnn_latency.json")

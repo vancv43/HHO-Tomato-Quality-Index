@@ -125,5 +125,5 @@
   ],
   "total_train_seconds": 575.6611137390137,
   "epochs": 20,
-  "device": "mps"
+  "device": "gpu"
 }

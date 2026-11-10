@@ -1,3 +1,10 @@
+# Van Van Chau(1), Phayung Meesad(2,*), and Minh Tuan Nguyen(1)
+# (1) Faculty of Information Technology, Posts and Telecommunications Institute of Technology,
+#     Ho Chi Minh City, Vietnam, vancv@ptit.edu.vn, minhtuan@ptit.edu.vn
+# (2) Department of Information Technology Management, King Mongkut's University of Technology North Bangkok,
+#     Bangkok, Thailand, phayung.m@itd.kmutnb.ac.th
+# (*) Corresponding author
+#
 import os
 import json
 import time
@@ -11,7 +18,7 @@ from train_baseline import make_models, softmax_simplex
 
 OUT = os.environ.get("TOMATO_OUT_DIR", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "outputs"))
 os.makedirs(OUT, exist_ok=True)
-DATA_ROOT = os.environ.get("TOMATO_DATA_ROOT", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "Tomatoes Dataset"))
+DATA_ROOT = os.environ.get("TOMATO_DATA_ROOT", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data_raw", "Tomatoes Dataset"))
 SEED = 42
 
 if __name__ == "__main__":

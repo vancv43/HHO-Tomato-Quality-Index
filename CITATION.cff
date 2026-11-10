@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the article below."
+title: "HHO-Tomato-Quality-Index"
+repository-code: "https://github.com/vancv43/HHO-Tomato-Quality-Index"
+license: MIT
+type: software
+authors: &authors
+  - family-names: "Van Chau"
+    given-names: "Van"
+    orcid: "https://orcid.org/0009-0008-0325-6809"
+    affiliation: "Posts and Telecommunications Institute of Technology"
+  - family-names: "Meesad"
+    given-names: "Phayung"
+    orcid: "https://orcid.org/0000-0002-3742-6457"
+    affiliation: "King Mongkut's University of Technology North Bangkok"
+    email: "phayung.m@itd.kmutnb.ac.th"
+  - family-names: "Nguyen"
+    given-names: "Minh Tuan"
+    orcid: "https://orcid.org/0000-0002-4035-1759"
+    affiliation: "Posts and Telecommunications Institute of Technology"
+preferred-citation:
+  type: article
+  title: "Harris Hawks Optimization–Optimized Explainable Quality Index for Tomato Grading"
+  authors: *authors
+  journal: "Journal of Data Science and Intelligent Systems"
+  year: 2026
+  doi: "10.47852/bonviewJDSIS620211565"
+  url: "https://ojs.bonviewpress.com/index.php/jdsis/article/view/11565"

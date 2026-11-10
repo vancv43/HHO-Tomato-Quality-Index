@@ -1,10 +1,14 @@
+# Van Van Chau(1), Phayung Meesad(2,*), and Minh Tuan Nguyen(1)
+# (1) Faculty of Information Technology, Posts and Telecommunications Institute of Technology,
+#     Ho Chi Minh City, Vietnam, vancv@ptit.edu.vn, minhtuan@ptit.edu.vn
+# (2) Department of Information Technology Management, King Mongkut's University of Technology North Bangkok,
+#     Bangkok, Thailand, phayung.m@itd.kmutnb.ac.th
+# (*) Corresponding author
+#
 import os
 import json
 import numpy as np
 import shap
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import ExtraTreesClassifier
 
@@ -47,17 +51,6 @@ if __name__ == "__main__":
     print("\nTop features (global mean |SHAP|):")
     for i in top_idx:
         print(f"  {FEATURE_NAMES[i]:20s} {mean_abs_global[i]:.5f}")
-
-    # bar chart: top-15 global feature importance
-    fig, ax = plt.subplots(figsize=(6.5, 5.0))
-    names_top = [FEATURE_NAMES[i] for i in top_idx][::-1]
-    vals_top = [mean_abs_global[i] for i in top_idx][::-1]
-    ax.barh(names_top, vals_top, color="#2E7D8C")
-    ax.set_xlabel("Mean |SHAP value| (avg. over 4 classes)")
-    ax.set_title("Top-15 color-statistical features by SHAP importance\n(Extra Trees base learner)")
-    fig.tight_layout()
-    fig.savefig(f"{OUT}/fig_shap_importance.png", dpi=220)
-    plt.close(fig)
 
     # per-class top-5 table
     per_class_top = {}

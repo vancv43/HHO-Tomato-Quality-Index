@@ -1,9 +1,13 @@
+# Van Van Chau(1), Phayung Meesad(2,*), and Minh Tuan Nguyen(1)
+# (1) Faculty of Information Technology, Posts and Telecommunications Institute of Technology,
+#     Ho Chi Minh City, Vietnam, vancv@ptit.edu.vn, minhtuan@ptit.edu.vn
+# (2) Department of Information Technology Management, King Mongkut's University of Technology North Bangkok,
+#     Bangkok, Thailand, phayung.m@itd.kmutnb.ac.th
+# (*) Corresponding author
+#
 import os
 import json
 import numpy as np
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score
@@ -50,21 +54,6 @@ if __name__ == "__main__":
     std_curve = curves.std(axis=0)
     mean_f1 = 1 - mean_curve
 
-    fig, ax = plt.subplots(figsize=(6.2, 4.2))
-    iters = np.arange(len(mean_curve))
-    ax.plot(iters, mean_f1, color="#1F4E5A", lw=2, label="Mean best macro-F1 (10 seeds)")
-    ax.fill_between(iters, 1 - (mean_curve - std_curve), 1 - (mean_curve + std_curve),
-                     color="#1F4E5A", alpha=0.18, label="$\\pm$1 SD")
-    ax.set_xlabel("HHO iteration")
-    ax.set_ylabel("Best validation macro-F1 found so far")
-    ax.set_title("HHO convergence: ensemble-weight optimization\n(16 hawks, 10 random seeds)")
-    ax.legend(fontsize=8.5, frameon=False)
-    ax.spines["top"].set_visible(False)
-    ax.spines["right"].set_visible(False)
-    fig.tight_layout()
-    fig.savefig(f"{OUT}/fig_hho_convergence.png", dpi=220)
-    plt.close(fig)
-
     with open(f"{OUT}/convergence_results.json", "w") as f:
         json.dump({"curves": curves.tolist(), "mean_f1_per_iter": mean_f1.tolist()}, f, indent=2)
-    print("Saved fig_hho_convergence.png and convergence_results.json")
+    print("Saved convergence_results.json")
